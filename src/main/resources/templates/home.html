@@ -1,1 +1,33 @@
-<h1>COVID-19 Tracker</h1>
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+
+<head>
+    <title>COVID-19 US Data</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../css/gtvg.css" th:href="@{/css/gtvg.css}"/>
+</head>
+
+<body>
+
+<!--<p th:text="#{home.welcome}">Welcome to our grocery store!</p>-->
+
+<h1>The United States- State List</h1>
+
+<table>
+    <tr>
+        <th>State Code</th>
+        <th>State Name</th>
+    </tr>
+    <tr th:each="state : ${stateList}">
+        <td th:text="${state.key}"></td>
+        <td th:text="${state.value}"></td>
+    </tr>
+</table>
+
+
+</body>
+
+</html>
