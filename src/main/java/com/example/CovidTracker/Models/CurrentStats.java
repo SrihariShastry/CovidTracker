@@ -498,7 +498,66 @@ public class CurrentStats {
     public void setGrade(String grade) {
         this.grade = grade;
     }
-
+    @Override
+    public String toString() {
+        return "CurrentStats{" +
+                "state='" + state + '\'' +
+                ", positive='" + positive + '\'' +
+                ", death='" + death + '\'' +
+                ", hospitalizedCurrently='" + hospitalizedCurrently + '\'' +
+                ", hospitalizedCumulative='" + hospitalizedCumulative + '\'' +
+                ", inIcuCurrently='" + inIcuCurrently + '\'' +
+                ", inIcuCumulative='" + inIcuCumulative + '\'' +
+                ", recovered='" + recovered + '\'' +
+                ", date='" + date + '\'' +
+                ", probableCases='" + probableCases + '\'' +
+                ", negative='" + negative + '\'' +
+                ", pending='" + pending + '\'' +
+                ", totalTestResultsSource='" + totalTestResultsSource + '\'' +
+                ", totalTestResults='" + totalTestResults + '\'' +
+                ", onVentilatorCurrently='" + onVentilatorCurrently + '\'' +
+                ", onVentilatorCumulative='" + onVentilatorCumulative + '\'' +
+                ", dataQualityGrade='" + dataQualityGrade + '\'' +
+                ", lastUpdateEt='" + lastUpdateEt + '\'' +
+                ", dateModified='" + dateModified + '\'' +
+                ", checkTimeEt='" + checkTimeEt + '\'' +
+                ", hospitalized='" + hospitalized + '\'' +
+                ", dateChecked='" + dateChecked + '\'' +
+                ", totalTestsViral='" + totalTestsViral + '\'' +
+                ", positiveTestsViral='" + positiveTestsViral + '\'' +
+                ", negativeTestsViral='" + negativeTestsViral + '\'' +
+                ", positiveCasesViral='" + positiveCasesViral + '\'' +
+                ", deathConfirmed='" + deathConfirmed + '\'' +
+                ", deathProbable='" + deathProbable + '\'' +
+                ", totalTestEncountersViral='" + totalTestEncountersViral + '\'' +
+                ", totalTestsPeopleViral='" + totalTestsPeopleViral + '\'' +
+                ", totalTestsAntibody='" + totalTestsAntibody + '\'' +
+                ", positiveTestsAntibody='" + positiveTestsAntibody + '\'' +
+                ", negativeTestsAntibody='" + negativeTestsAntibody + '\'' +
+                ", totalTestsPeopleAntibody='" + totalTestsPeopleAntibody + '\'' +
+                ", positiveTestsPeopleAntibody='" + positiveTestsPeopleAntibody + '\'' +
+                ", negativeTestsPeopleAntibody='" + negativeTestsPeopleAntibody + '\'' +
+                ", totalTestsPeopleAntigen='" + totalTestsPeopleAntigen + '\'' +
+                ", positiveTestsPeopleAntigen='" + positiveTestsPeopleAntigen + '\'' +
+                ", totalTestsAntigen='" + totalTestsAntigen + '\'' +
+                ", positiveTestsAntigen='" + positiveTestsAntigen + '\'' +
+                ", fips='" + fips + '\'' +
+                ", positiveIncrease='" + positiveIncrease + '\'' +
+                ", negativeIncrease='" + negativeIncrease + '\'' +
+                ", total='" + total + '\'' +
+                ", totalTestResultsIncrease='" + totalTestResultsIncrease + '\'' +
+                ", posNeg='" + posNeg + '\'' +
+                ", deathIncrease='" + deathIncrease + '\'' +
+                ", hospitalizedIncrease='" + hospitalizedIncrease + '\'' +
+                ", hash='" + hash + '\'' +
+                ", commercialScore='" + commercialScore + '\'' +
+                ", negativeRegularScore='" + negativeRegularScore + '\'' +
+                ", negativeScore='" + negativeScore + '\'' +
+                ", positiveScore='" + positiveScore + '\'' +
+                ", score='" + score + '\'' +
+                ", grade='" + grade + '\'' +
+                '}';
+    }
 
 
 }

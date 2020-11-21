@@ -1,39 +1,27 @@
 package com.example.CovidTracker.services;
 
 import com.example.CovidTracker.Models.CurrentStats;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.util.ArrayList;
-import java.util.List;
+import java.net.URL;
 
 @Service
 public class CovidDataService {
 
-    private String VIRUS_DATA_URL="https://api.covidtracking.com/v1/states/daily.json";
-    private List<CurrentStats> currentStats;
+    private final String VIRUS_DATA_URL="https://api.covidtracking.com/v1/states/ca/current.json";
 
     //execute after creating the instance of this service
     @PostConstruct
     @Scheduled(cron = "* * 1 * * *")
     public void fetchData(){
-        currentStats = new ArrayList<>();
 
         try {
-            HttpClient client = HttpClient.newHttpClient();
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(new URI(VIRUS_DATA_URL))
-                    .build();
-
-            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            CurrentStats currentStat = new CurrentStats();
-            System.out.println(response.body());
-
+            ObjectMapper mapper = new ObjectMapper();
+            CurrentStats currentStat= mapper.readValue(new URL(VIRUS_DATA_URL),CurrentStats.class);
+            System.out.println("hello");
         }catch (Exception e){
             e.printStackTrace();
         }
