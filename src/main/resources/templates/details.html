@@ -12,29 +12,16 @@
 
 <body>
 
-<!--<p th:text="#{home.welcome}">Welcome to our grocery store!</p>-->
-
-<h1 class="text-center">Details of the State</h1>
-<!--put an unordered list to show details-->
-
-
-<!--<ul class="list-group" >-->
-<!--    &lt;!&ndash;warning for probable&ndash;&gt;-->
-<!--    &lt;!&ndash;red for death&ndash;&gt;-->
-<!--    &lt;!&ndash;blue for new cases&ndash;&gt;-->
-<!--    &lt;!&ndash; green for recovered&ndash;&gt;-->
-<!--    <li class="list-group-item list-group-item-action list-group-item-danger" style="width:auto" th:text="${currentStat.death}"></li>-->
-
-<!--</ul>-->
-
-<table class="table mx-auto" style="width:80%">
-    <thead class="thead-dark">
+<div class="container">
+    <h1 class="text-center">Covid Data of the State</h1>
+    <table class="table mx-auto" style="width:80%">
+        <thead class="thead-dark">
         <tr scope="row">
             <th class="text-center" scope="col"><h3>Description</h3></th>
             <th class="text-center" scope="col"><h3>Detail</h3></th>
         </tr>
-    </thead>
-    <tbody class="tbody-dark">
+        </thead>
+        <tbody class="tbody-dark">
         <tr scope="row">
             <td class="text-center">Total Cases</td>
             <td class="text-center" th:text="${currentStat.total}"></td>
@@ -71,10 +58,10 @@
             <td class="text-center" th:text="${currentStat.dataQualityGrade}"></td>
         </tr>
 
-    </tbody>
-</table>
+        </tbody>
+    </table>
 
-
+</div>
 </body>
 
 </html>

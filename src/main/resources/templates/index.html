@@ -11,28 +11,28 @@
 </head>
 
 <body>
+<div class="container">
+    <!--<p th:text="#{home.welcome}">Welcome to our grocery store!</p>-->
 
-<!--<p th:text="#{home.welcome}">Welcome to our grocery store!</p>-->
+    <h1 class="text-center">The United States- State List</h1>
+    <form action="#" th:action="@{/details}" th:object="${stateSelection}" method="post">
+        <table class="table mx-auto" style="width:auto">
+            <tr>
+                <td>Select State</td>
+                <td>
+                    <select class="custom-select" name="stateList" th:field="*{state}">
+                        <option th:each="state:${stateList}"
+                                th:value="${state.key}" th:text="${state.value}"
+                        />
+                    </select>
+                </td>
 
-<h1 class="text-center">The United States- State List</h1>
-<form action="#" th:action="@{/details}" th:object="${stateSelection}" method="post">
-    <table class="table mx-auto" style="width:auto">
-        <tr>
-            <td>Select State</td>
-            <td>
-                <select class="custom-select" name="stateList" th:field="*{state}">
-                    <option th:each="state:${stateList}"
-                            th:value="${state.key}" th:text="${state.value}"
-                    />
-                </select>
-            </td>
-            <td><input class="btn btn-outline-secondary" type="submit" name="get" value="Get Data"></td>
-        </tr>
-    </table>
+                <td><input class="btn btn-outline-secondary" type="submit" name="get" value="Get Data"></td>
+            </tr>
+        </table>
+    </form>
 
-
-</form>
-
+</div>
 </body>
 
 </html>

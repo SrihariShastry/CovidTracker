@@ -2,13 +2,8 @@ package com.example.CovidTracker.services;
 
 import com.example.CovidTracker.Models.CurrentStats;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.PostConstruct;
-import java.io.File;
 import java.net.URL;
-import java.util.HashMap;
 
 @Service
 public class CovidDataService {
@@ -28,8 +23,6 @@ public class CovidDataService {
 //    @PostConstruct
 //    @Scheduled(cron = "* * 1 * * *")
     public void fetchData(String url){
-//        stateList = new HashMap<>();
-
         try {
             ObjectMapper mapper = new ObjectMapper();
             this.currentStat= mapper.readValue(new URL(url),CurrentStats.class);
