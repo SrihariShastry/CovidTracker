@@ -1,7 +1,6 @@
 package com.example.CovidTracker.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
